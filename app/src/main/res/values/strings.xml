@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MobileBeginner</string>
+    <string name="move_activity">Move Activity</string>
+    <string name="this_is_move_activity">This is move activity</string>
+    <string name="move_with_data">Move With Data</string>
+    <string name="data_received">Data Received</string>
 </resources>
