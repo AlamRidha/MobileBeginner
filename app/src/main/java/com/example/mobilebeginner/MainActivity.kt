@@ -2,14 +2,14 @@ package com.example.mobilebeginner
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.example.mobilebeginner.data.User
+import com.example.mobilebeginner.recycleview.RecycleViewActivity
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
 
@@ -52,6 +52,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btnActivityResult.setOnClickListener(this)
 
         tvResult = findViewById(R.id.tv_move_for_result)
+
+        //  declaration for button to move activity with recycle view
+        val btnRecycleView: Button = findViewById(R.id.btn_move_rv)
+        btnRecycleView.setOnClickListener(this)
     }
 
     override fun onClick(v: View?) {
@@ -98,6 +102,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 val moveForResultIntent =
                     Intent(this@MainActivity, MoveForResultActivity::class.java)
                 resultLauncher.launch(moveForResultIntent)
+            }
+
+            R.id.btn_move_rv ->{
+                val moveRvIntent = Intent(this@MainActivity, RecycleViewActivity::class.java)
+                startActivity(moveRvIntent)
             }
         }
     }

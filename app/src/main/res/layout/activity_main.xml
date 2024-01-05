@@ -48,8 +48,16 @@
         android:id="@+id/tv_move_for_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="@string/result_from_activity"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btn_move_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/move_to_recycle_view_activity" />
 
 </LinearLayout>
