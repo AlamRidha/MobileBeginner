@@ -6,4 +6,13 @@
     <string name="data_received">Data Received</string>
     <string name="move_activity_with_object">Move Activity With Object</string>
     <string name="object_received">Object Received</string>
+    <string name="dial_number">Dial Number</string>
+    <string name="choose_the_number">Choose the number</string>
+    <string name="_50">50</string>
+    <string name="_100">100</string>
+    <string name="_150">150</string>
+    <string name="_200">200</string>
+    <string name="choose">Pilih</string>
+    <string name="move_with_result">Move With Result</string>
+    <string name="result_from_activity">Result from activity</string>
 </resources>
