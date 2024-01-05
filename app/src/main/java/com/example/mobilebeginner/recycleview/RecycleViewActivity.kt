@@ -3,6 +3,9 @@ package com.example.mobilebeginner.recycleview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobilebeginner.R
@@ -24,6 +27,27 @@ class RecycleViewActivity : AppCompatActivity() {
         player.addAll(getListPlayers())
         showRecycleList()
     }
+
+    //  TODO: 20. Make appbar menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_main, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
+    // TODO: 21. Make recycle view layout with another layout
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_list -> {
+                rvPlayer.layoutManager = LinearLayoutManager(this)
+            }
+
+            R.id.action_grid -> {
+                rvPlayer.layoutManager = GridLayoutManager(this, 2)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
 
     private fun showRecycleList() {
         //  TODO: 17. Make LayoutManager for RecycleView
