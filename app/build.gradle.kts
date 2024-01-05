@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    //  add plugin for parcelize to make our Parcelable more simple and no many code
+    id("kotlin-parcelize")
 }
 
 android {
