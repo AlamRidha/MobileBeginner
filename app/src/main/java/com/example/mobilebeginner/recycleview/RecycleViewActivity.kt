@@ -2,6 +2,7 @@ package com.example.mobilebeginner.recycleview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobilebeginner.R
@@ -29,6 +30,15 @@ class RecycleViewActivity : AppCompatActivity() {
         rvPlayer.layoutManager = LinearLayoutManager(this)
         val listPlayerAdapter = ListPlayerAdapter(player)
         rvPlayer.adapter = listPlayerAdapter
+
+        //  TODO: 19. Make item for click it
+        listPlayerAdapter.setOnItemClickCallBack(object : ListPlayerAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: Player) {
+                //  showSelectedPlayer(data)
+                Log.d("RV Activity", "This is ${data.name}")
+            }
+
+        })
     }
 
     private fun getListPlayers(): ArrayList<Player> {
