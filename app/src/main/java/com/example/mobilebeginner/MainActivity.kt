@@ -104,7 +104,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 resultLauncher.launch(moveForResultIntent)
             }
 
-            R.id.btn_move_rv ->{
+            R.id.btn_move_rv -> {
                 val moveRvIntent = Intent(this@MainActivity, RecycleViewActivity::class.java)
                 startActivity(moveRvIntent)
             }

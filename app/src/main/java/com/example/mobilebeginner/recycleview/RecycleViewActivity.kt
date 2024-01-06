@@ -9,18 +9,27 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobilebeginner.R
+import com.example.mobilebeginner.databinding.ActivityRecycleViewBinding
 
 class RecycleViewActivity : AppCompatActivity() {
+
+    //  declare for binding
+    private lateinit var binding: ActivityRecycleViewBinding
 
     //  declaration component
     private lateinit var rvPlayer: RecyclerView
     private val player = ArrayList<Player>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recycle_view)
+        //  set binding to root display the layout
+        binding = ActivityRecycleViewBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         //  call recycle view to connect our component
-        rvPlayer = findViewById(R.id.rv_nba_player)
+        //  rvPlayer = findViewById(R.id.rv_nba_player)
+        //  rvPlayer.setHasFixedSize(true)
+        // TODO: 22. Change using binding
+        rvPlayer = binding.rvNbaPlayer
         rvPlayer.setHasFixedSize(true)
 
         //  store all value to variable player and call show recycle list to activity
